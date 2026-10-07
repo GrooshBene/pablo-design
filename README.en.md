@@ -98,7 +98,11 @@ Attach documents, presentations, or screenshots, or provide their file paths. Wh
 
 > Pablo, turn the attached company overview into a 10-slide investor deck.
 
-Pablo reads the context, chooses a direction, and works through creation and verification. If you want to choose the direction yourself, add “Show me three options first.” Missing inputs or consequential ambiguities may require a question.
+If the design direction is still open, Pablo first shows **three distinct visual demos**. It creates them in parallel when the agent supports it, or sequentially otherwise. These are representative samples—such as key slides or the main screen—rather than three complete deliverables.
+
+**Choosing a demo sets a starting point, not final approval.** Pablo briefly checks what you want to refine, such as information density, color, or motion, and applies your feedback. You can say “B’s layout with C’s colors” or “Proceed as is.” It reuses requirements you have already provided.
+
+A concrete template or a targeted edit to an existing result can proceed directly. To delegate both the choice and refinement decisions, say **“Choose the direction and finish without asking design questions.”** Missing source material or consequential factual ambiguities still need clarification.
 
 **Type the request in your agent’s chat, not in the terminal.**
 
