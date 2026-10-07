@@ -1,113 +1,146 @@
-<p align="right"><a href="README.md">한국어</a> · <strong>English</strong></p>
-
-![Pablo — From context to design](assets/banner.svg)
-
 # Pablo
 
-**Understands the context. Finishes the design.**
+### You have the material. Let’s make it presentable.
 
-Share your material and ask in one sentence. Pablo identifies the purpose and audience, chooses a design direction, creates the deliverable, and checks the result. It is an agent skill for investor decks, UI mockups, system diagrams, presentation improvements, and brand adaptation.
+An investor presentation, a system your team needs to understand, a product screen that only exists in your notes.
+**Give Pablo the material and tell it what you want to make.** Pablo is an agent skill that helps organize, design, and turn it into a deliverable you can keep editing.
 
 ```text
 Pablo, turn this material into a 10-slide investor deck.
-Pablo, create a UI mockup from this screen.
-Pablo, visualize this system architecture.
-Pablo, review this presentation's design and improve it.
-Pablo, redesign this using our company brand.
 ```
 
-[Interactive demo](demos/pablo-demo.html) · [Local setup](#local-setup) · [Skill instructions](SKILL.md)
+Use it with **an agent that can read files and carry out work**, such as Codex. Ask in ordinary language, without operating a design tool yourself or composing a long prompt for every task.
 
-![Pablo interactive demo](assets/pablo-demo.png)
+[한국어](README.md) · [Use cases](#give-pablo-the-work-in-front-of-you) · [Get started](#get-started) · [Setup help](docs/SETUP.en.md)
 
-The demo contains **illustrative examples** of five request types. It does not call an AI service or generate real files. Download and open `demos/pablo-demo.html` in a browser; no account or external library is required. Switch between Korean and English inside the demo.
+![Pablo demo showing a request and its illustrative design direction](assets/pablo-demo.png)
 
-## Deliverables
+<sub>This is an illustrative workflow demo, not a live AI session. Download the <a href="demos/pablo-demo.html">HTML demo</a>, open it in your browser, and switch to English to explore all five request types.</sub>
 
-| Request | Default result |
-|---|---|
-| Investor deck | Requested slide count, editable PPTX, and PDF preview |
-| UI mockup | HTML/CSS or React source and preview |
-| System architecture | Mermaid or SVG source and rendered diagram |
-| Presentation review and editing | Slide-level findings, revised PPTX, and preview |
-| Brand adaptation | Revised original-format artifact and brand application summary |
+---
 
-Combine requests, such as a 10-slide deck using your company brand, or continue with “Change only slide 3.” Pablo preserves explicit formats, templates, counts, and source facts.
+## Give Pablo the work in front of you
 
-## Workflow
+### Turn scattered documents into a story you can present
 
-1. **Read the context** — identify the material, purpose, and audience from attachments, selected files, and the conversation.
-2. **Choose the structure and direction** — match the visual approach to the message. Wait for a design selection only when requested.
-3. **Create and revise** — preserve originals. A request to review and edit includes an actual revised deliverable.
-4. **Verify and deliver** — inspect the final files, content, page counts, and rendered output, and report limitations.
+Attach your company overview and source metrics.
 
-Pablo asks only for missing material or consequential ambiguities. It does not invent business metrics or system components to fill gaps.
+> Pablo, turn this into a 10-slide investor deck. Help investors understand the product and the evidence behind its growth.
 
-## Local setup
+Pablo develops a message for each slide and creates an **editable PPTX with a PDF preview**. It keeps the requested slide count and does not invent revenue or market-size figures missing from your material.
 
-With Node.js and Python 3 available:
+### Make a screen easier to see, discuss, and try
+
+Share a screenshot or describe the screen.
+
+> Pablo, create a UI mockup from this screen. Keep the structure, but make the main action easier to find.
+
+Pablo refines the hierarchy and layout into a **browser-viewable mockup with source files**. Relevant clicks and input states can be implemented and checked as demo interactions.
+
+### Make a complex system easier to explain
+
+Point to the design document or relevant project files.
+
+> Pablo, visualize this system architecture. Separate the data flows between services from external integrations.
+
+Pablo maps the components and connections into an **editable diagram**, distinguishing verified structure from assumptions.
+
+### Improve a presentation without starting over
+
+Attach the existing presentation.
+
+> Pablo, review this deck and improve its design. Keep the content, but fix the type sizes, alignment, and visual flow.
+
+You get slide-level findings **and an actual revised file**. If you only want feedback, ask for a review. The original is preserved.
+
+### Bring different designs into your company’s brand
+
+Share the existing design along with your logo, brand guidelines, or template.
+
+> Pablo, redesign this using our company brand. Apply the colors and typography from the attached guide.
+
+Pablo aligns typography, spacing, imagery, and chart styling—not just the color palette. You receive a **new version that keeps the content and applies your brand**.
+
+---
+
+## Get started
+
+### 1. Prepare your workspace once
+
+With your agent, **Node.js, Python 3, and Git** ready, run this in a terminal:
 
 ```bash
-git clone https://github.com/grooshbene/pablo-design.git
+git clone https://github.com/GrooshBene/pablo-design.git
 cd pablo-design
 ./pablo setup
-./pablo doctor
 ```
 
-Setup installs Node dependencies, a Python virtual environment, Chromium, and a Korean font inside the project. It downloads packages and a checksum-verified font from their sources; it does not upload your documents.
+This installs the production and verification tools inside the project. It does not install Node.js or Python themselves. **PPTX work needs additional tools:** Chrome for the existing HTML→PPTX exporter on macOS, and LibreOffice for rendering PPTX previews. [Prerequisites and diagnostics →](docs/SETUP.en.md)
 
-| Capability | Additional requirement |
+<details>
+<summary>Already using agent skills?</summary>
+
+```bash
+npx skills add GrooshBene/pablo-design
+```
+
+The skill is named `pablo`. Run `./pablo setup` inside the installed Pablo folder as well. Skill installation gives your agent the workflow; local setup prepares the tools that produce the files. [Installation details →](docs/SETUP.en.md#install-as-a-skill)
+
+</details>
+
+### 2. Open the project in your agent and share the material
+
+Open the downloaded **`pablo-design` folder as your agent’s working project**. Its project instructions connect Pablo requests to the workflow. To use Pablo in other projects, use the skill installation option above.
+
+Attach documents, presentations, or screenshots, or provide their file paths. When you say “this material,” make sure the agent has the material you mean.
+
+### 3. Ask for the result you want
+
+> Pablo, turn the attached company overview into a 10-slide investor deck.
+
+Pablo reads the context, chooses a direction, and works through creation and verification. If you want to choose the direction yourself, add “Show me three options first.” Missing inputs or consequential ambiguities may require a question.
+
+**Type the request in your agent’s chat, not in the terminal.**
+
+---
+
+## Keep refining it in the same conversation
+
+Look at the result and ask for the changes you want.
+
+```text
+Change only slide 3. Make the title larger and shorten the body copy.
+
+Make this mockup open a detail view when the button is clicked.
+
+Show where the external payment service connects in this diagram.
+
+Keep this design, but apply our company’s brand colors.
+```
+
+You don’t need design vocabulary. **Who will see it, and what should stand out?** Those details help Pablo choose a direction. Follow-up edits continue from the current artifact and established design.
+
+## What do you receive?
+
+Pablo returns file links, the main changes, and what it verified. Files go to `outputs/<task-name>/` unless you specify another location.
+
+- **Originals are preserved.** Revisions are saved as new versions.
+- **No promotional watermark by default.** Company and client materials are not automatically stamped with the tool’s name.
+- **Unverified details are called out.** Complex PPTX charts, animations, and masters may not survive every editing tool.
+
+Pablo combines agent instructions with local tools. Results depend on the source material and available tools. Check important presentations in the app you will use to present them.
+
+---
+
+## Learn more
+
+| I want to… | Read |
 |---|---|
-| Existing HTML→PPTX exporter on macOS | Google Chrome |
-| PPTX→PDF/image rendering | LibreOffice's `soffice` executable |
-| Video processing | FFmpeg / FFprobe |
-| Optional cloud TTS/video review | Provider credentials and explicit transmission consent |
-
-If LibreOffice is not discovered automatically, specify its executable:
-
-```bash
-export PABLO_SOFFICE="/Applications/LibreOffice.app/Contents/MacOS/soffice"
-```
-
-Open this repository in your agent and make a Pablo request with your material. `AGENTS.md` connects requests to the skill. The terminal command `./pablo` handles setup, conversion, and verification; it is not a standalone natural-language AI service.
-
-### Install as a skill
-
-For agents with skill support:
-
-```bash
-npx skills add grooshbene/pablo-design
-```
-
-The skill is named `pablo`. Verify that the installed folder includes `SKILL.md`, `references/`, `assets/`, `scripts/`, `pablo`, and the dependency files. Run `./pablo setup` from that folder. Installing the skill and installing its local production dependencies are separate steps.
-
-## Check the environment
-
-```bash
-./pablo smoke
-```
-
-This creates a two-slide Korean test deck and checks PPTX/PDF export, PPTX rendering, a text-preserving formatting edit, and rejection of partial conversion failures. Results are stored in `outputs/pablo-smoke-*/`. Visual quality still requires inspection of the final images.
-
-To convert your own HTML slides:
-
-```bash
-./pablo export-deck --slides ./my-slides --out ./outputs/my-deck --expected-slides 10
-./pablo inspect-pptx ./outputs/my-deck/deck.pptx
-./pablo render-pptx ./outputs/my-deck/deck.pptx --out ./outputs/my-deck-rendered
-```
-
-Use sortable filenames such as `01.html`, with only slide HTML files in the input directory. The existing HTML→PPTX constraints apply. Conversion errors, count mismatches, or text mismatches prevent publication of the output. Existing output directories are not overwritten.
-
-## Scope and output policy
-
-- Output defaults to `outputs/<task-name>/` unless a destination is specified.
-- Client deliverables receive **no promotional Pablo or upstream-tool watermark by default**. If a creator credit is requested, use `Made with Pablo`.
-- Complex PPTX charts, animations, and masters may not survive every editing tool. Preserve originals and verify the features the task requires.
-- LibreOffice may render differently from PowerPoint or Keynote. A PDF exported from HTML does not verify the final PPTX's appearance.
-- `.venv/`, `.pablo/`, `node_modules/`, and `outputs/` are excluded from Git.
-- An agent executes the workflow. This repository does not provide a standalone chat web service or production backend.
+| Install Pablo or check my environment | [Setup and diagnostics](docs/SETUP.en.md) |
+| Run conversion and verification commands directly | [Local tools](docs/SETUP.en.md#check-the-environment) |
+| Understand how Pablo decides what to do | [Workflow instructions](SKILL.md) |
+| Understand external data transmission | [Data-flow statement](SECURITY.md) |
 
 ## Attribution and license
 
-Pablo builds on Huashu Design's design resources and production tools. Original copyright notices and the MIT license are retained; product branding does not replace attribution. [Attribution](ATTRIBUTION.md) · [LICENSE](LICENSE) · [Data-flow statement](SECURITY.md)
+Pablo extends Huashu Design’s production tools and design resources. Original copyright notices are retained. [Attribution](ATTRIBUTION.md) · [MIT License](LICENSE)
