@@ -37,3 +37,11 @@ _style-research/
 demos/**/*.mp4
 __pycache__/
 .last-update-check
+
+# Pablo local dependencies and private work products
+.venv/
+.pablo/
+outputs/
+
+# Local agent session metadata
+graft/.cache/

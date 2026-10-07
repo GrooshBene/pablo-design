@@ -1,0 +1,6 @@
+interface:
+  display_name: "Pablo"
+  short_description: "IR Deck, UI 목업, 아키텍처 시각화와 PPT 리뷰·브랜드 적용"
+  default_prompt: "$pablo로 제공한 자료를 원하는 디자인 산출물로 만들어줘."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+export PLAYWRIGHT_BROWSERS_PATH="$ROOT/.pablo/browsers"
+if [[ "${1:-}" == setup ]]; then exec bash "$ROOT/scripts/pablo/setup.sh"; fi
+if [[ ! -x "$ROOT/.venv/bin/python" ]]; then
+  echo '로컬 환경이 없습니다. 프로젝트에서 ./pablo setup을 실행하세요.' >&2
+  exit 1
+fi
+exec "$ROOT/.venv/bin/python" "$ROOT/scripts/pablo/run.py" "$@"

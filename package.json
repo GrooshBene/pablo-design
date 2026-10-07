@@ -4,5 +4,10 @@
     "playwright": "^1.59.1",
     "pptxgenjs": "^4.0.1",
     "sharp": "^0.34.5"
+  },
+  "scripts": {
+    "pablo:setup": "bash scripts/pablo/setup.sh",
+    "pablo:doctor": "./pablo doctor",
+    "pablo:smoke": "./pablo smoke"
   }
 }
