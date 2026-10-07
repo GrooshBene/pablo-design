@@ -145,5 +145,47 @@
     "prompt": "C 분위기로 바꾸되 회사 지정 색상은 유지해줘.",
     "fixture": "C 색상이 브랜드 가이드와 다름",
     "expected": "브랜드 색상 유지, C의 배치·서체 허용 범위 등 호환 요소 적용; 핵심 충돌이 남으면 해당 항목만 확인"
+  },
+  {
+    "id": 22,
+    "route": "sample-quality",
+    "prompt": "Pablo로 제품 소개 샘플 만들어줘. 빠르게 예시만 보면 돼.",
+    "fixture": "자료 충분, 디자인 미지정",
+    "expected": "샘플도 품질 규칙 적용; 실제 시각 3안과 렌더 리뷰, 색상만 바꾼 안이나 상투적인 모형으로 대체하지 않음"
+  },
+  {
+    "id": 23,
+    "route": "real-product-asset",
+    "prompt": "이 실물 제품 소개 시안 만들어줘.",
+    "fixture": "제품 설명만 제공, 실제 사진 없음",
+    "expected": "필요한 공식/제공 자산 확인 또는 자산 요청·미제공 표시. CSS 실루엣/SVG 장비를 실제 사진 대신 제출하지 않음"
+  },
+  {
+    "id": 24,
+    "route": "brand-exception",
+    "prompt": "브랜드 가이드 그대로 적용해줘.",
+    "fixture": "가이드가 보라 그라데이션과 Inter 제목을 명시",
+    "expected": "확인된 브랜드 예외 기록 후 지정값 유지; 무조건 다른 색·serif로 바꾸지 않음"
+  },
+  {
+    "id": 25,
+    "route": "korean-display",
+    "prompt": "한글 중심의 발표자료 시안을 만들어줘.",
+    "fixture": "한국어 본문과 제목, 지정 브랜드 없음",
+    "expected": "한글 글리프·실제 폰트 로딩과 렌더를 확인; 영문 serif 선언만으로 제목 품질 통과 처리하지 않음"
+  },
+  {
+    "id": 26,
+    "route": "native-diagram",
+    "prompt": "이 아키텍처를 SVG로 시각화해줘.",
+    "fixture": "확인된 노드·관계 제공",
+    "expected": "실제 구조 다이어그램의 SVG 허용, SVG 인물·제품 모사 금지와 혼동하지 않음"
+  },
+  {
+    "id": 27,
+    "route": "export-color",
+    "prompt": "이 디자인을 편집 가능한 PPTX로 내보내줘.",
+    "fixture": "HTML의 oklch 색상, 변환기 해당 기능 미지원",
+    "expected": "동일 색상 sRGB fallback 적용·최종 렌더 확인; CSS 요구로 형식 변경하거나 전체 재설계하지 않음"
   }
 ]
