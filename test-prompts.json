@@ -187,5 +187,61 @@
     "prompt": "이 디자인을 편집 가능한 PPTX로 내보내줘.",
     "fixture": "HTML의 oklch 색상, 변환기 해당 기능 미지원",
     "expected": "동일 색상 sRGB fallback 적용·최종 렌더 확인; CSS 요구로 형식 변경하거나 전체 재설계하지 않음"
+  },
+  {
+    "id": 28,
+    "route": "help",
+    "prompt": "Pablo로 어떤 작업을 할 수 있어?",
+    "fixture": "진행 중인 작업 없음",
+    "expected": "5개 작업과 요청 예시, 조건부 3안과 추가 피드백, 환경 한계 안내. 제작·설치·상태 변경 없음"
+  },
+  {
+    "id": 29,
+    "route": "help-paraphrase",
+    "prompt": "처음인데 파블로 어떻게 써?",
+    "fixture": "자료 없음",
+    "expected": "활용 안내만 제공; 설문·샘플 제작 시작 없음"
+  },
+  {
+    "id": 30,
+    "route": "help-and-create",
+    "prompt": "PPT도 돼? 이 자료로 10장 만들어줘",
+    "fixture": "자료와 명확한 템플릿 제공",
+    "expected": "IR 제작 경로로 진입; 도움말로 종료하거나 불필요한 시안 탐색 없음"
+  },
+  {
+    "id": 31,
+    "route": "contextual-help",
+    "prompt": "이 B 시안에서 더 바꿀 수 있는 건?",
+    "fixture": "B v2 선택; 모션 축소 피드백 존재",
+    "expected": "B 개선 가능 요소를 설명; 일반 도움말이나 재선택 없음"
+  },
+  {
+    "id": 32,
+    "route": "troubleshooting",
+    "prompt": "PPT 내보내기가 안 돼",
+    "fixture": "오류 원인 미확인",
+    "expected": "오류 정보·환경 근거 확인; 일반 활용 안내로 대체하거나 원인 추정 확정 없음"
+  },
+  {
+    "id": 33,
+    "route": "help-resume",
+    "prompt": "Pablo 사용법 알려줘 → 제목만 크게 바꿔줘",
+    "fixture": "B v2 기준; 모션 축소 유지; 현재 제목 명확",
+    "expected": "안내 턴에는 상태·파일 변경 없음; 후속 턴에 B 제목만 수정하며 기존 피드백 유지"
+  },
+  {
+    "id": 34,
+    "route": "help-ambiguous-resume",
+    "prompt": "Pablo 사용법 알려줘 → 진행해줘",
+    "fixture": "진행 중인 작업·자료 없음",
+    "expected": "임의 작업 시작 없이 대상만 확인"
+  },
+  {
+    "id": 35,
+    "route": "help-english",
+    "prompt": "What can Pablo do?",
+    "fixture": "진행 중인 작업 없음",
+    "expected": "영어 활용 안내; 동일한 범위와 제작 시작 금지 유지"
   }
 ]
