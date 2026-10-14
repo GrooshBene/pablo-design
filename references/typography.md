@@ -160,7 +160,7 @@ font-family: "Newsreader", "Noto Serif SC", "Songti SC", serif;
 
 **数字规则**：数字一律走西文字体（fallback 链已保证），数据表格必须加 `font-variant-numeric: tabular-nums`，否则 1 和 8 宽度不同，列会抖。
 
-**中英之间不加空格**：这是本仓库规范（花叔明确不用盘古之白），靠 fallback 链的字体本身留白，不靠手动敲空格。
+**中英之间不加空格**：这是本仓库规范（原案例作者明确不用盘古之白），靠 fallback 链的字体本身留白，不靠手动敲空格。
 
 ### 4.3 中文没有斜体
 

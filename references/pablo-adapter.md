@@ -1,6 +1,6 @@
-# Huashu 기술 자료 사용 경계
+# 제작 참고 자료 사용 경계
 
-Pablo 요청은 SKILL.md → pablo-workflows.md → 필요한 기술 자료 순서로 실행한다. 원본 Huashu 지침 전체를 다른 활성 스킬로 호출하지 않는다. 다음 표는 원본 문서를 수정하지 않고 재사용하는 범위를 정한다.
+Pablo 요청은 SKILL.md → pablo-workflows.md → 필요한 기술 자료 순서로 실행한다. 원본 지침 전체를 다른 활성 스킬로 호출하지 않는다. 다음 표는 기술 자료를 재사용하는 범위를 정한다.
 
 | 참조 | 가져올 기술 | Pablo에서 별도로 결정할 사항 |
 |---|---|---|
@@ -10,7 +10,7 @@ Pablo 요청은 SKILL.md → pablo-workflows.md → 필요한 기술 자료 순�
 | app-prototype.md | 컴포넌트, 상태 구현, 필요할 때 기기 프레임 | 4~6화면 강제, 모든 화면에 이미지·프레임 추가 |
 | react-setup.md | Babel 기반 단일 HTML을 택한 경우에만 로딩·스코프 규칙 | 다른 React 빌드 방식의 라이브러리 버전·구조 |
 | brand-asset-protocol.md | 제공 자료의 진위, 로고 파일·컬러·폰트 확인 | 관련 없는 제품 이미지 수집, 모든 브랜드 작업에서 로고 강제 |
-| content-guidelines.md / UPSTREAM-DESIGN.md §6 | Anti AI-slop, 타이포그래피·색상·실제 제품 자산의 품질 원칙. 활성 기준은 [pablo-visual-quality.md](pablo-visual-quality.md) | 원본의 별도 승인 절차·이미지 생성 도구를 강제하지 않음 |
+| content-guidelines.md | Anti AI-slop, 타이포그래피·색상·실제 제품 자산의 품질 원칙. 활성 기준은 [pablo-visual-quality.md](pablo-visual-quality.md) | 원본의 별도 승인 절차·이미지 생성 도구를 강제하지 않음 |
 | critique-guide.md | 메시지, 계층, 정렬, 가독성 평가 관점 | 특정 미학 강요, 점수표·레이더 차트 자동 추가 |
 
 보안·데이터 전송 동의와 변환 도구의 실제 기술 제약은 유지한다. 기존 문서의 상반된 변환 경로를 만났다면 입력 형식과 요청된 납품 형식으로 선택한다. 원본 PPTX 편집에는 HTML→PPTX 도구를 사용하지 않는다.

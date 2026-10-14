@@ -1,4 +1,4 @@
-"""Pablo local adapter. Existing Huashu tools remain unchanged."""
+"""Pablo local adapter. Production tool integration."""
 import argparse
 import importlib
 import json

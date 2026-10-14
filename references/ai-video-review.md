@@ -3,7 +3,7 @@
 > 终渲MP4喂给视频理解模型（seed-2.0-lite），按固定checklist出结构化评审报告。
 > 定位：**终渲后、交付前**的最后一道质检，替代人肉全片重看。不替代逐帧verify-video.sh。
 > ⚠️ 可选云能力：压缩后的视频段会发送到火山方舟官方接口（ark.cn-beijing.volces.com），
-> 使用你自己的ARK_API_KEY，需`--yes`或`HUASHU_CLOUD_OK=1`显式确认。见仓库根`SECURITY.md`。
+> 使用你自己的ARK_API_KEY，需`--yes`或`PABLO_CLOUD_OK=1`显式确认。见仓库根`SECURITY.md`。
 > 不想用云：`scripts/verify-video.sh`截帧人工看，全程本地。
 
 ## 何时用
@@ -17,10 +17,10 @@
 
 ```bash
 cd 项目目录 && unset ALL_PROXY   # 脚本内已免疫代理，unset是双保险
-uv run ~/.claude/skills/huashu-design/scripts/cloud/ai-review-video.py \
+uv run ~/.claude/skills/pablo/scripts/cloud/ai-review-video.py \
   --video 成片.mp4 \
   --context 导演稿.md \      # 强烈建议带上：模型靠它区分「设计意图」和「bug」
-  --yes                      # 确认视频段发送火山方舟（或 HUASHU_CLOUD_OK=1）
+  --yes                      # 确认视频段发送火山方舟（或 PABLO_CLOUD_OK=1）
 ```
 
 - ARK_API_KEY 配在 skill 根目录 `.env`（已 gitignore）或环境变量，脚本只提取这一个变量

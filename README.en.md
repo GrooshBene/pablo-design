@@ -147,4 +147,4 @@ Pablo combines agent instructions with local tools. Results depend on the source
 
 ## Attribution and license
 
-Pablo extends Huashu Design’s production tools and design resources. Original copyright notices are retained. [Attribution](ATTRIBUTION.md) · [MIT License](LICENSE)
+Pablo is available under the MIT License. [License and copyright notices](LICENSE) · [Credits](ATTRIBUTION.md)

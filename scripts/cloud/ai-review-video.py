@@ -10,7 +10,7 @@ AI看片评审闭环 —— 渲染出的动画MP4喂给视频理解模型（seed
 按固定checklist逐段送审 + 全片低清扫一遍，汇总成结构化markdown评审报告。
 
 ⚠️ 可选云能力：会把压缩后的成片片段发送到火山方舟官方接口（ark.cn-beijing.volces.com）
-做视频理解评审，使用你自己的 ARK_API_KEY。首次调用需 --yes 或 HUASHU_CLOUD_OK=1
+做视频理解评审，使用你自己的 ARK_API_KEY。首次调用需 --yes 或 PABLO_CLOUD_OK=1
 显式确认。数据流向声明见仓库根 SECURITY.md。本地免费替代：scripts/verify-video.sh 截帧人工看。
 
 Usage:
@@ -259,18 +259,18 @@ def main():
     ap.add_argument("--model", default=DEFAULT_MODEL, help=f"模型（默认{DEFAULT_MODEL}）")
     ap.add_argument("--output", "-o", help="报告路径（默认视频同目录<视频名>-AI评审.md）")
     ap.add_argument("--yes", action="store_true",
-                    help="确认将压缩后的视频段发送到火山方舟官方接口（或设 HUASHU_CLOUD_OK=1）")
+                    help="确认将压缩后的视频段发送到火山方舟官方接口（或设 PABLO_CLOUD_OK=1）")
     args = ap.parse_args()
 
     video = Path(args.video).resolve()
     if not video.exists():
         sys.exit(f"Error: 视频不存在 {video}")
 
-    if not args.yes and os.getenv("HUASHU_CLOUD_OK") != "1":
+    if not args.yes and os.getenv("PABLO_CLOUD_OK", os.getenv("HUASHU_CLOUD_OK")) != "1":
         sys.exit(
             f"[云能力确认] 本次将把 {video.name} 压缩后分段发送到 ark.cn-beijing.volces.com"
             "（火山方舟官方接口，使用你自己的 ARK_API_KEY 做视频理解评审）。\n"
-            "确认无误请重跑并加 --yes，或设置环境变量 HUASHU_CLOUD_OK=1。"
+            "确认无误请重跑并加 --yes，或设置环境变量 PABLO_CLOUD_OK=1。"
             "数据流向声明见 SECURITY.md；本地免费替代：scripts/verify-video.sh。")
     out_path = Path(args.output) if args.output else video.parent / f"{video.stem}-AI评审.md"
 

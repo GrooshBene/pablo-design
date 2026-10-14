@@ -1,8 +1,9 @@
 # Gallery Ripple + Multi-Focus · 场景编排哲学
 
-> 从 huashu-design hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。
+> Adapted reference example. Project and author labels are generic placeholders; these are not Pablo customer results. See the repository credits for provenance.
+
+> 从 参考设计工具 hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。
 > 不是动画制作流水线，是**什么场景下这种编排是"对的"**。
-> 实战参考：[demos/hero-animation-v9.mp4](../demos/hero-animation-v9.mp4) · [https://www.huasheng.ai/huashu-design-hero/](https://www.huasheng.ai/huashu-design-hero/)
 
 ## 一句话先行
 
@@ -202,7 +203,7 @@ Brand wordmark 从 Thin → Bold 用 0.9s 渐变，配合 letter-spacing 微调�
 
 ### 5. **Corner Brand 低强度持续签名**
 
-Gallery 阶段左上角有个 `HUASHU · DESIGN` 小标识，16% opacity 色值，12px 字号，宽字距。
+Gallery 阶段左上角有个 `DESIGN STUDIO` 小标识，16% opacity 色值，12px 字号，宽字距。
 
 **为什么加这个**：
 - Ripple 爆发后观众容易"失焦"不记得在看什么，左上角轻标示帮助 anchor
@@ -247,4 +248,3 @@ Gallery 阶段左上角有个 `HUASHU · DESIGN` 小标识，16% opacity 色值�
 - 动画导出流水线：[references/video-export.md](video-export.md)
 - 音频配置（BGM + SFX 双轨）：[references/audio-design-rules.md](audio-design-rules.md)
 - Apple 画廊风格的横向参考：[references/apple-gallery-showcase.md](apple-gallery-showcase.md)
-- 源 HTML（v6 + 音频集成版）：`www.huasheng.ai/huashu-design-hero/index.html`

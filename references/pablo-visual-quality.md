@@ -1,6 +1,6 @@
 # Pablo Anti AI-slop 품질 기준
 
-[UPSTREAM-DESIGN.md](../UPSTREAM-DESIGN.md)의 §6과 [content-guidelines.md](content-guidelines.md)의 시각 품질 원칙을 Pablo의 활성 제작 기준으로 유지한다. 샘플·설명용 예시·탐색 시안·최종 결과물 모두에 적용한다. “데모니까” 또는 “AI처럼 보이지 않게 색상만 변경”은 예외 사유가 아니다. 원본의 운영 절차·도구 지정까지 다시 활성화하지는 않는다.
+[content-guidelines.md](content-guidelines.md)의 시각 품질 원칙을 Pablo의 활성 제작 기준으로 유지한다. 샘플·설명용 예시·탐색 시안·최종 결과물 모두에 적용한다. “데모니까” 또는 “AI처럼 보이지 않게 색상만 변경”은 예외 사유가 아니다. 원본의 운영 절차·도구 지정까지 다시 활성화하지는 않는다.
 
 ## 제작 전: 내용에서 형태를 정한다
 

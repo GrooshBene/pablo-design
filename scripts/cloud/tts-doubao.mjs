@@ -3,7 +3,7 @@
  * tts-doubao.mjs · 豆包语音 TTS（火山引擎 openspeech）
  *
  * ⚠️ 可选云能力：本脚本会把待配音文本发送到字节跳动官方 TTS 接口（openspeech.bytedance.com），
- * 使用你自己的 key，endpoint 强制校验域名白名单。首次调用需 --yes 或 HUASHU_CLOUD_OK=1
+ * 使用你自己的 key，endpoint 强制校验域名白名单。首次调用需 --yes 或 PABLO_CLOUD_OK=1
  * 显式确认。数据流向声明见仓库根 SECURITY.md。
  *
  * 用法：
@@ -85,7 +85,7 @@ tts-doubao.mjs · 豆包语音 TTS
   --voice <voice_id>    覆盖 .env 里的音色 id
   --encoding <ext>      mp3 / wav / pcm，默认 mp3
   --timestamps          请求字级时间戳（enable_subtitle），结果 JSON 多一个 words 数组
-  --yes                 确认将文本发送到豆包 TTS 官方接口（或设 HUASHU_CLOUD_OK=1）
+  --yes                 确认将文本发送到豆包 TTS 官方接口（或设 PABLO_CLOUD_OK=1）
 `.trim());
   process.exit(1);
 }
@@ -204,7 +204,7 @@ async function tts({ text, voice, speed, encoding, timestamps }) {
   if (!voiceId) throw new Error('缺 DOUBAO_TTS_VOICE_ID（检查 .env 或用 --voice 传）');
 
   const body = {
-    user: { uid: 'huashu-design' },
+    user: { uid: 'pablo' },
     req_params: {
       text,
       speaker: voiceId,
@@ -249,11 +249,11 @@ async function main() {
     usage();
   }
 
-  if (!args.yes && process.env.HUASHU_CLOUD_OK !== '1') {
+  if (!args.yes && (process.env.PABLO_CLOUD_OK ?? process.env.HUASHU_CLOUD_OK) !== '1') {
     const host = new URL(process.env.DOUBAO_TTS_ENDPOINT || 'https://openspeech.bytedance.com').hostname;
     console.error(
       `[云能力确认] 本次将把约${text.length}字文本发送到 ${host}（豆包TTS官方接口，使用你自己的key合成语音）。\n` +
-      `确认无误请重跑并加 --yes，或设置环境变量 HUASHU_CLOUD_OK=1。数据流向声明见 SECURITY.md。`,
+      `确认无误请重跑并加 --yes，或设置环境变量 PABLO_CLOUD_OK=1。数据流向声明见 SECURITY.md。`,
     );
     process.exit(2);
   }

@@ -1,6 +1,6 @@
 # GSAP Recipes · 设计语言到 GSAP Timeline 的翻译层
 
-> 本文件只做一件事：把 huashu-design 已沉淀的动画设计语言
+> 本文件只做一件事：把 参考设计工具 已沉淀的动画设计语言
 > （`animation-best-practices.md` 的五段叙事、easing 体系、运动语言 8 条、场景配方，
 > 以及 `cinematic-patterns.md` 的 22 秒 5-scene 模板）翻译成可直接粘贴的
 > GSAP timeline 实现配方，跑在 HyperFrames 渲染后端上。

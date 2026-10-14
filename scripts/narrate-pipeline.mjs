@@ -17,7 +17,7 @@
  *   ---
  *
  *   ## intro
- *   大家好，我是花叔。今天我们 5 分钟讲清楚 LLM 是什么。
+ *   大家好，我是作者。今天我们 5 分钟讲清楚 LLM 是什么。
  *
  *   ## what-is
  *   LLM 全称 Large Language Model，[[cue:bigmodel]]它是一个有几千亿参数的神经网络。
@@ -62,7 +62,7 @@ narrate-pipeline.mjs · L2 长解说总指挥
   --script <path>     解说稿 .md 文件（必填）
   --out-dir <path>    输出目录（必填）
   --no-timestamps     不请求字级时间戳（默认请求，chunks 里带 words 供卡拉OK字幕）
-  --yes               确认将解说稿文本发送到豆包 TTS 官方接口（或设 HUASHU_CLOUD_OK=1）
+  --yes               确认将解说稿文本发送到豆包 TTS 官方接口（或设 PABLO_CLOUD_OK=1）
 
 输出：<out-dir>/voiceover.mp3 + <out-dir>/timeline.json
 `.trim());
@@ -190,10 +190,10 @@ async function main() {
   const args = parseArgs(process.argv);
   if (args.help || !args.script || !args.outDir) usage();
 
-  if (!args.yes && process.env.HUASHU_CLOUD_OK !== '1') {
+  if (!args.yes && (process.env.PABLO_CLOUD_OK ?? process.env.HUASHU_CLOUD_OK) !== '1') {
     console.error(
       '[云能力确认] 本管线会把解说稿文本分段发送到豆包TTS官方接口（openspeech.bytedance.com，' +
-      '使用你自己的key合成配音）。\n确认无误请重跑并加 --yes，或设置环境变量 HUASHU_CLOUD_OK=1。' +
+      '使用你自己的key合成配音）。\n确认无误请重跑并加 --yes，或设置环境变量 PABLO_CLOUD_OK=1。' +
       '数据流向声明见 SECURITY.md。',
     );
     process.exit(2);

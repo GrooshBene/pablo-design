@@ -1,5 +1,7 @@
 # Launch Film 工作流：先写万字 director's notes，再做动画
 
+> Adapted reference example. Project and author labels are generic placeholders; these are not Pablo customer results. See the repository credits for provenance.
+
 > 高规格视觉作品（≥ 20 秒、含品牌叙事、含 slogan reveal、可能上 X / 公众号 / B 站推广）的标准工作流。
 >
 > 触发条件：任务是「产品升级宣传片 / 品牌 launch film / launch trailer / superbowl-tier ad / brand campaign / hero animation video」，且**用户对质量有明确预期**（如「超级碗品质感」「10x 细节」「Apple 级别」）。
@@ -10,7 +12,7 @@
 
 ## 1. 为什么先写 director's notes
 
-实战教训（2026-05-11 huashu-md-html v2.0 项目）：
+实战教训（2026-05-11 示例文档工具 v2.0 项目）：
 
 第一轮直接动手写 HTML，产出的是「程序员视角的动画」——每个 capability 平均用力、节奏匀速、slogan 撞在一起、缺少叙事弧。
 第二轮接到用户「停下，先按苹果导演视角写 1 万字分镜脚本」的指令，写了 v5-director-notes.md（11500 字、13 镜 shot-by-shot spec），然后按脚本实施——一次过、每帧 pause 都耐看、节奏起伏有 climax。
@@ -209,7 +211,7 @@ done
 
 复杂项目（如 launch film 选不出方向 / 想看多个美学差异 / 客户没拍板风格）可以**启动多个 subagent 并行做不同导演视角的版本**。
 
-实战配置（2026-05-11 huashu-md-html 项目，并行 6 个版本）：
+实战配置（2026-05-11 示例文档工具 项目，并行 6 个版本）：
 
 ```
 v5  · 基线（Anthropic / Penguin Classics 出版社品位）
@@ -293,4 +295,4 @@ v5f · 草间彌生 Yayoi Kusama（圆点 + 重复 + 单一强色）
 ---
 
 *最后修订：2026-05-11*
-*真实案例：huashu-md-html v2.0 launch film（v5-director-notes.md）*
+*真实案例：示例文档工具 v2.0 launch film（v5-director-notes.md）*

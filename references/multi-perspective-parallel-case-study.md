@@ -1,13 +1,15 @@
 # 多视角并行实验 · Case Study
 
-> huashu-md-html v2.0 launch film 项目 · 2026-05-11
+> Adapted reference example. Project and author labels are generic placeholders; these are not Pablo customer results. See the repository credits for provenance.
+
+> 示例文档工具 v2.0 launch film 项目 · 2026-05-11
 > 6 位艺术家视角的并行 director's notes + HTML + 关键帧实验
 
 ---
 
 ## 背景
 
-用户要求「为 huashu-md-html v2.0 制作 30 秒升级宣传片」时，主线程先产出了 v5 基线（Anthropic / Penguin Classics 出版社品位）。但用户认为可以做得更好，给了 critical instruction：
+用户要求「为 示例文档工具 v2.0 制作 30 秒升级宣传片」时，主线程先产出了 v5 基线（Anthropic / Penguin Classics 出版社品位）。但用户认为可以做得更好，给了 critical instruction：
 
 > 「调用不同的 subagent 分别再去生成 6 个全然不同的表达方式和视觉设计的版本。你可以试试启用不同的导演和艺术家。然后全都完成后，再评判审校。」
 
@@ -145,7 +147,7 @@ use case 分配（按平台和受众）：
 
 ---
 
-## 关键洞察（写给 huashu-design 的未来用户）
+## 关键洞察（写给 参考设计工具 的未来用户）
 
 ### 洞察 1 · 「先写万字 director's notes」方法论**完全 reproducible**
 
@@ -264,4 +266,4 @@ subagent 完成需要 12-15 分钟。这段时间主线程绝不该空闲：
 ---
 
 *Last updated: 2026-05-11*
-*Real case study: huashu-md-html v2.0 launch film 6-perspective parallel experiment*
+*Real case study: 示例文档工具 v2.0 launch film 6-perspective parallel experiment*

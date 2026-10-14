@@ -1,6 +1,6 @@
 # Pablo 작업별 실행 규칙
 
-아래 경로는 Pablo 루트 기준이다. 필요한 절만 읽고 실행한다. Huashu 자료는 `references/pablo-adapter.md`의 허용 범위로 참조한다.
+아래 경로는 Pablo 루트 기준이다. 필요한 절만 읽고 실행한다. 기술 자료는 `references/pablo-adapter.md`의 허용 범위로 참조한다.
 
 ## 탐색용 시안 범위와 고도화 질문
 

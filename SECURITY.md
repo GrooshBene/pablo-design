@@ -4,13 +4,13 @@
 
 `./pablo setup` installs packages from npm/PyPI, downloads Playwright browsers, and downloads a checksum-verified Noto CJK font and its license from `raw.githubusercontent.com/notofonts/noto-cjk`. It sends no user documents. The adapter uses local browsers and LibreOffice for conversion and rendering. Font configuration and runtime paths are stored in the ignored `.pablo/` directory. The new `demos/pablo-demo.html` uses no external libraries, AI calls, or network requests on load; its repository link opens only when clicked. No telemetry is added by the Pablo adapter.
 
-The statement below describes the inherited Huashu production tools. Offline rendering depends on the input HTML: external fonts, libraries, or images may still cause browser requests.
+The statement below describes the production tools. Offline rendering depends on the input HTML: external fonts, libraries, or images may still cause browser requests.
 
-## Inherited production tools
+## Production tools
 
 This document exhaustively declares every network destination, credential touchpoint, subprocess, and deletion this skill can perform, so that users and automated security reviewers can verify the claims against the code.
 
-**TL;DR: the core pipeline (HTML design → render → MP4/PDF/PPTX export) runs 100% locally with zero network calls and zero API keys. All cloud-touching code is isolated in `scripts/cloud/`, is strictly optional, uses only keys you supply, sends data only to the corresponding vendor's official API, and refuses to run without explicit consent (`--yes` flag or `HUASHU_CLOUD_OK=1`). There is no telemetry. No data is ever sent to any server controlled by the skill author.**
+**TL;DR: the core pipeline (HTML design → render → MP4/PDF/PPTX export) runs 100% locally with zero network calls and zero API keys. All cloud-touching code is isolated in `scripts/cloud/`, is strictly optional, uses only keys you supply, sends data only to the corresponding vendor's official API, and refuses to run without explicit consent (`--yes` flag or `PABLO_CLOUD_OK=1`). There is no telemetry. No data is ever sent to any server controlled by the skill author.**
 
 ## Complete list of network destinations
 
@@ -33,7 +33,9 @@ That is the entire list. `grep -rn "https://" --include="*.py" --include="*.mjs"
 
 ## Explicit consent gate
 
-Both cloud scripts print exactly what will be sent to which host and exit before any network call unless you pass `--yes` or set `HUASHU_CLOUD_OK=1`. Everything else in this skill never needs the gate because it never leaves your machine.
+`PABLO_CLOUD_OK` is the current setting. The legacy consent variable is accepted only when it is unset; an explicit Pablo value takes precedence. Prefer `--yes` for consent scoped to one invocation.
+
+Both cloud scripts print exactly what will be sent to which host and exit before any network call unless you pass `--yes` or set `PABLO_CLOUD_OK=1`. Everything else in this skill never needs the gate because it never leaves your machine.
 
 ## Subprocesses
 

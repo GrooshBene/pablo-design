@@ -147,4 +147,4 @@ Pablo는 에이전트와 로컬 도구가 함께 작업하는 스킬입니다. �
 
 ## 출처와 라이선스
 
-Pablo는 Huashu Design의 제작 도구와 디자인 자료를 기반으로 확장했습니다. 원저작자 고지를 보존합니다. [출처 안내](ATTRIBUTION.md) · [MIT License](LICENSE)
+Pablo는 MIT 라이선스로 제공됩니다. [라이선스 및 저작권 고지](LICENSE) · [제작 자료 출처](ATTRIBUTION.md)

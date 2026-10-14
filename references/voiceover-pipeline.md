@@ -368,7 +368,7 @@ NarrationStage 自动检测 `window.__recording`：
 ## .env 配置
 
 > ⚠️ TTS 是可选云能力：解说稿文本会发送到豆包 TTS 官方接口（openspeech.bytedance.com），
-> 使用你自己的 key。脚本首次调用需 `--yes` 或 `HUASHU_CLOUD_OK=1` 显式确认，
+> 使用你自己的 key。脚本首次调用需 `--yes` 或 `PABLO_CLOUD_OK=1` 显式确认，
 > endpoint 强制校验字节官方域名白名单。数据流向声明见仓库根 `SECURITY.md`。
 
 skill 根目录下 `.env`（已 gitignore）：

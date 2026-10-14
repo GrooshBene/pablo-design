@@ -1,8 +1,10 @@
 # v5 · "Markdown is the new typewriter."
 
-> Director's Notes for the **huashu-md-html v2.0** launch film
+> Adapted reference example. Project and author labels are generic placeholders; these are not Pablo customer results. See the repository credits for provenance.
+
+> Director's Notes for the **示例文档工具 v2.0** launch film
 > 30 seconds · 1920×1080 · 25 fps · no voiceover
-> Director: huashu-design (acting as Apple-tier launch film director)
+> Director: 参考设计工具 (acting as Apple-tier launch film director)
 > Composer: TBD (target: Max Richter / Ólafur Arnalds / Jóhann Jóhannsson minimal-cinematic register)
 > Color base: ivory white #FAFAF6 · ink #1A1A1A · terracotta #C2410C
 > Type: Newsreader (display + body) · JetBrains Mono (interface) · Noto Serif SC (中文)
@@ -31,7 +33,7 @@
 
 > **「md 是源代码，万物是产物。」**
 
-这不是 slogan，是世界观。Markdown 不是「一种轻量级文档格式」——它是写作的源头。一切下游的形式（html、docx、pdf、epub）都是从这同一个源头派生出的产物。huashu-md-html v2.0 把这条产物链从 4 条延长到 6 条——但延长的不是「功能列表」，是**源头的影响力半径**。
+这不是 slogan，是世界观。Markdown 不是「一种轻量级文档格式」——它是写作的源头。一切下游的形式（html、docx、pdf、epub）都是从这同一个源头派生出的产物。示例文档工具 v2.0 把这条产物链从 4 条延长到 6 条——但延长的不是「功能列表」，是**源头的影响力半径**。
 
 如果观众看完这支片只记住一件事，我希望那件事是：「原来 md 才是源代码」。功能列表能记多少都是 bonus。
 
@@ -88,7 +90,7 @@ Vignelli 的 8 字格言：「If you can design one thing, you can design everyt
 
 三类观众，按重要性排：
 
-**主受众 A · 已使用 v1 的 huashu-md-html 老用户（约占 60% 流量）**
+**主受众 A · 已使用 v1 的 示例文档工具 老用户（约占 60% 流量）**
 
 他们打开片子是为了知道「升级了啥」。我们对他们的承诺：30 秒之内，你必须明确知道——
 - 新增能力 5：md → 出版级 PDF
@@ -97,7 +99,7 @@ Vignelli 的 8 字格言：「If you can design one thing, you can design everyt
 
 → Shot 08 和 Shot 09 各 3 秒，必须有「★ NEW」标签 + destination card 上必须能看到「印厂裁切标记」「Apple Books frame」这类**看得见的专业级细节**——让老用户秒懂「这不是凑数功能，是正经做了的」。
 
-**次受众 B · 听说过 huashu-md-html 但没用的 AI Native 创作者（约 25%）**
+**次受众 B · 听说过 示例文档工具 但没用的 AI Native 创作者（约 25%）**
 
 他们关心的是「这个 skill 跟我有什么关系」。我们对他们的承诺：30 秒之内，你必须意识到——
 - 你写文章 / 做调研 / 做白皮书时，**md 应该是你的 source of truth**
@@ -283,7 +285,7 @@ scene 之间过渡            300ms 重叠    cross-dissolve + scale
 
 ```
    ╔═════════════════════════╗
-   ║ ● HUASHU-MD-HTML · v2.0 ║
+   ║ ● DOCUMENT STUDIO · v2.0 ║
    ╚═════════════════════════╝
 ```
 
@@ -306,7 +308,7 @@ scene 之间过渡            300ms 重叠    cross-dissolve + scale
 **Chrome D · bottom-right · watermark（持续）**
 
 ```
-   CREATED BY HUASHU-DESIGN
+   CREATED BY DESIGN STUDIO
 ```
 
 - 字体：JetBrains Mono 10px，letter-spacing 0.24em
@@ -625,7 +627,7 @@ cursor 是写作的最小单位。从一个 cursor 开始，是「源代码」�
 **[CHROME]**
 
 - 04.50s · Chrome B（version chip top-right）开始浮现 (fade-in 600ms)
-  - 形态：`● HUASHU-MD-HTML · v2.0`
+  - 形态：`● DOCUMENT STUDIO · v2.0`
   - terracotta dot, mono text, Ink color
   - 进入位置：top: 78px, right: 80px
 - 仍隐藏：Chrome A, C, E（visible only ≥ 06s）
@@ -755,7 +757,7 @@ destination card 设计（**真实可读的内容，不是 bar lines**）：
 │  ways. The river forks; the      │
 │  spring stays the same.          │
 │                                  │
-│  ─ huashu, 2026.05.11            │  ← italic 14px, Smoke
+│  ─ original author, 2026.05.11            │  ← italic 14px, Smoke
 │                                  │
 │  article.html · TUFTE THEME      │  ← Mono 10px, 0.18em, Smoke (bottom)
 └─────────────────────────────────┘
@@ -1077,7 +1079,7 @@ PDF B（大32开，前面）：
 - ✅ 两张 PDF 不是「叠在一起」的廉价 stacking，是 fan + 旋转（暗示「打开看」的物理动作）
 - ✅ crop marks 是真正印厂术语的视觉表达，pause 时能看到「啊这是 print-ready」
 - ✅ 没用 glow 或 particle 来强调「NEW」——靠 typography 和 SFX 自己说话
-- ✅ pause-and-look signature：PDF B 顶部的「大32开 · 176×240mm」中英混排，是花叔生态对国内纸质书规格的尊重
+- ✅ pause-and-look signature：PDF B 顶部的「大32开 · 176×240mm」中英混排，是原案例作者生态对国内纸质书规格的尊重
 
 **[WHY]**
 
@@ -1106,7 +1108,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
    ║ ● ● ●                              ║  ← window chrome (Apple Books)
    ╠════════════════════════════════════╣
    ║                                    ║
-   ║  HUASHU · ORANGE BOOK              ║  ← Mono Bold 10px Terracotta 0.22em
+   ║  STUDIO · ORANGE BOOK              ║  ← Mono Bold 10px Terracotta 0.22em
    ║                                    ║
    ║                                    ║
    ║  On                                ║  ← Newsreader 700, 30px, Ivory paper
@@ -1114,7 +1116,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
    ║                                    ║
    ║  ───                               ║  ← Terracotta rule 40×2px
    ║                                    ║
-   ║  an essay · 花叔                   ║  ← italic 14px Smoke on Charred
+   ║  an essay · 原案例作者                   ║  ← italic 14px Smoke on Charred
    ║                                    ║
    ╠════════════════════════════════════╣
    ║ Apple Books · 1 of 24    EPUB 3   ║  ← Mono 10px Smoke 0.14em
@@ -1131,7 +1133,7 @@ destination card 设计：**Apple Books 风的 EPUB reader frame**（强调「�
 
 **[TYPE]**
 
-- HUASHU · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
+- STUDIO · ORANGE BOOK：Mono Bold 10px, Terracotta, 0.22em
 - book title (On Markdown)：Newsreader 700, 30px, Ivory (on Charred bg), line-height 1.0
 - terracotta rule：40×2px
 - author italic：Noto Serif SC italic 14px, Smoke
@@ -1450,14 +1452,14 @@ md 是源代码，万物是产物。
 30.00s：所有元素到位。最后一帧是：
 
 ```
-                                                                  ● HUASHU-MD-HTML · v2.0
+                                                                  ● DOCUMENT STUDIO · v2.0
                                                                                               (top-right chrome)
 
 
                                             md.                   ← Newsreader 600, 88px, Ink + Terracotta dot
                                           ───                     ← Terracotta rule, 120×2px
 
-                                                                                CREATED BY HUASHU-DESIGN
+                                                                                CREATED BY DESIGN STUDIO
                                                                                               (bottom-right watermark)
 ```
 
@@ -1563,7 +1565,7 @@ no vocals, 30 seconds duration, ivory paper mood
 
 ## 5.4 SFX 来源
 
-**首选**：用 huashu-design skill 的 `assets/sfx/<category>/*.mp3` 37 个预制资源：
+**首选**：用 参考设计工具 skill 的 `assets/sfx/<category>/*.mp3` 37 个预制资源：
 
 ```
 事件                          推荐 SFX 文件
