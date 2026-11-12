@@ -148,3 +148,5 @@ Pablo combines agent instructions with local tools. Results depend on the source
 ## Attribution and license
 
 Pablo is available under the MIT License. [License and copyright notices](LICENSE) · [Credits](ATTRIBUTION.md)
+
+Current version: **3.3.0** · Existing installations: [update and patch guide](docs/UPDATE.md).

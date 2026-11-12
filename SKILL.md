@@ -43,12 +43,16 @@ description: "Pablo(파블로)로 IR Deck·발표자료 제작, UI 목업, 시�
 - 기존 기술 자료는 재사용하되, 요청 해석·기본 출력·진행 절차는 이 파일과 `references/pablo-workflows.md`를 기준으로 한다. 참조 문서의 다른 기본값이나 반복 승인 절차를 자동으로 추가하지 않는다. 브랜드 사실 확인과 도구의 데이터 전송 제한은 유지한다.
 - `LICENSE`와 파일별 필수 저작권 고지를 보존한다. 제작 절차는 이 파일을 진입점으로 사용한다.
 
+## 최신 제작 도구
+
+3.3.0 기술 자료는 [최신 도구 연결](references/pablo-modern-tools.md)을 따라 필요한 것만 사용한다. 사용 안내에는 적용하지 않는다. 모듈의 6개 후보·강제 3안·별도 gate 절차보다 이 파일의 요청 범위와 `pablo-design-dialogue.md`를 우선한다.
+
 ## 로컬 실행과 참조 경계
 
-- 실행 전 `./pablo doctor`로 환경을 확인한다. 설치가 필요하면 `./pablo setup`을 사용한다. Python 작업은 `.venv/bin/python`, 브라우저 경로는 `.pablo/browsers`를 사용한다.
+- 스킬을 읽은 실제 경로의 부모 디렉터리를 `PABLO_ROOT`로 정하고, 프로젝트 밖에서도 `"$PABLO_ROOT/pablo" doctor`로 확인한다. 설치가 필요하면 `"$PABLO_ROOT/pablo" setup`을 사용한다. Python은 `"$PABLO_ROOT/.venv/bin/python"`, 참조·스크립트·폰트는 모두 이 루트의 절대 경로로 실행한다. 입력·출력 경로 역시 사용자 프로젝트 기준 절대 경로로 전달한다.
 - 기존 스킬 전체를 재호출하지 않는다. [참조 어댑터](references/pablo-adapter.md)에 명시한 기술 항목만 읽고, 과거 운영 규칙은 Pablo 흐름에 적용하지 않는다.
-- 새 HTML 덱은 `./pablo export-deck --slides <폴더> --out <새 폴더> --expected-slides <장수>`로 변환한다. 부분 실패·장수 불일치·텍스트 누락을 검사하며 최종 파일이 이미 있으면 덮어쓰지 않는다.
-- 기존 PPTX는 `./pablo inspect-pptx <파일>`로 편집 전후 구조를 확인하고, `./pablo render-pptx <파일> --out <새 폴더>`로 실제 PPTX를 렌더링한다. 검증기는 디자인 품질이나 모든 원본 기능 보존을 보장하지 않으므로 결과 이미지를 직접 확인한다.
+- 새 HTML 덱은 `"$PABLO_ROOT/pablo" export-deck --slides <폴더> --out <새 폴더> --expected-slides <장수>`로 변환한다. 부분 실패·장수 불일치·텍스트 누락을 검사하며 최종 파일이 이미 있으면 덮어쓰지 않는다.
+- 기존 PPTX는 `"$PABLO_ROOT/pablo" inspect-pptx <파일>`로 편집 전후 구조를 확인하고, `"$PABLO_ROOT/pablo" render-pptx <파일> --out <새 폴더>`로 실제 PPTX를 렌더링한다. 검증기는 디자인 품질이나 모든 원본 기능 보존을 보장하지 않으므로 결과 이미지를 직접 확인한다.
 - “3장만 수정”처럼 수량과 페이지 번호가 모호하면 문맥으로 확인하고 결정할 수 없을 때만 질문한다.
 
 ## 브랜드 표시

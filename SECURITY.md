@@ -60,3 +60,13 @@ Mainstream registry packages only (`playwright`, `sharp`, `pptxgenjs`, `pdf-lib`
 ## Reporting
 
 Found something that contradicts this document? Please open an issue — a mismatch between this file and the code is treated as a bug.
+
+## Pablo 3.3 local helpers and updates
+
+`ref_board.py` opens explicitly supplied reference URLs or local files in Chromium; it does not filter destinations. Use only task-authorized sources. Style specimens can load external fonts/CDNs. `polish.py` and the linter render supplied pages, which can also load their external resources.
+
+Optional personal records are stored under `PABLO_DESIGN_HOME` or `~/.pablo-design/`: `learn.py add` writes preferences/quotes; `design_lint.py ledger add` writes visual fingerprints and project paths. They are local and are not included in releases. Recording is subject to the user's authorized scope.
+
+`ref_board.py` and `build_specimens.py` remove their generated temporary board/sheet pages. A failed reference-board run can remove its previous output to avoid stale results.
+
+`apply_update.py` accepts a trusted release ZIP and an explicit existing installation root. It checks payload and installed-file hashes before modification, refuses local edits/nested symlinks/protected runtime paths, backs up changed files alongside the target, and rolls back ordinary application errors. Hash checks detect corruption and drift; they do not authenticate an untrusted publisher. Abrupt process termination may require recovery from the backup. It makes no network calls and does not modify credentials, runtime folders, user outputs or Git metadata.

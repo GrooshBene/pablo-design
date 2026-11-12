@@ -1,8 +1,6 @@
 # Gallery Ripple + Multi-Focus · 场景编排哲学
 
-> Adapted reference example. Project and author labels are generic placeholders; these are not Pablo customer results. See the repository credits for provenance.
-
-> 从 参考设计工具 hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。
+> 从 Pablo hero 动画 v9（25 秒，8 场景）里提炼出的**一种可复用的视觉编排结构**。
 > 不是动画制作流水线，是**什么场景下这种编排是"对的"**。
 
 ## 一句话先行
@@ -162,6 +160,8 @@ const panY = Math.cos(panT * 0.09) * 120 - panT * 5;
 **什么时候仍用 cubicOut**：focus out ramp、对称的微动效。
 
 ### 2. **纸感底色 + 赤陶橙 accent（Anthropic 血统）**
+
+> 这是本 skill 自己的 hero 动画（Claude 生态题材）的品牌选择，**不要当默认搬到别的题材**。可迁移的是「一个 accent 串起所有视觉锚点」这个方法，不是这两个色值。
 
 ```css
 --bg: #F7F4EE;        /* 暖纸 */

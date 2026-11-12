@@ -10,5 +10,6 @@
     "pablo:setup": "bash scripts/pablo/setup.sh",
     "pablo:doctor": "./pablo doctor",
     "pablo:smoke": "./pablo smoke"
-  }
+  },
+  "version": "3.3.0"
 }

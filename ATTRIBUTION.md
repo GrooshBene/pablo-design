@@ -7,3 +7,5 @@ Pablo adapts the interface, examples, and workflow. Generic labels in adapted ca
 Historical documentation remains in Git history. Current installation and execution instructions are maintained in Korean and English.
 
 The optional Noto Sans CJK KR font is downloaded separately during local setup. Its SIL Open Font License is saved beside the font in `.pablo/fonts/LICENSE` and is not replaced by this repository's license.
+
+The 3.3.0 tool/reference refresh is pinned in `upstream-version.json`. Assets under `assets/style-specimens/xhs/_kit/stickers/` use PolyForm Shield 1.0.0, not MIT; preserve their accompanying license and required notice. They are layout examples, not a blanket license for customer deliverables.
