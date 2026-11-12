@@ -47,7 +47,9 @@ def update(archive, target, apply=False):
             pending.append((name, data, item.get('mode', 420)))
         print(f'Validated {len(entries)} managed paths; {len(pending)} changes for {manifest["version"]}')
         if not apply or not pending: return
-        backup = Path(tempfile.mkdtemp(prefix='pablo-update-backup-', dir=root.parent))
+        backup_home = Path.home() / '.pablo-design' / 'update-backups'
+        backup_home.mkdir(parents=True, exist_ok=True)
+        backup = Path(tempfile.mkdtemp(prefix='pablo-', dir=backup_home))
         changed = []
         try:
             for name, data, mode in pending:

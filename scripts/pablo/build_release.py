@@ -16,16 +16,19 @@ def tree(ref):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--base',required=True);p.add_argument('--out',required=True,type=Path)
+    p.add_argument('--base',required=True);p.add_argument('--also-base',action='append',default=[]);p.add_argument('--out',required=True,type=Path)
     a=p.parse_args();a.out.mkdir(parents=True,exist_ok=True)
     version=git('show','HEAD:VERSION').decode().strip();head=git('rev-parse','HEAD').decode().strip()
-    old=tree(a.base);new=tree('HEAD');manifest={'schema':1,'project':'pablo-design','version':version,'commit':head,'base':a.base,'files':{}}
+    old=tree(a.base);new=tree('HEAD');extra=[(ref,tree(ref)) for ref in a.also_base];manifest={'schema':1,'project':'pablo-design','version':version,'commit':head,'base':a.base,'files':{}}
     bundle=a.out/f'pablo-design-{version}-update.zip'
     with zipfile.ZipFile(bundle,'w',zipfile.ZIP_DEFLATED) as z:
         for name in sorted(old.keys()|new.keys()):
             data=git('show','HEAD:'+name) if name in new else None
             before=git('show',a.base+':'+name) if name in old else None
-            manifest['files'][name]={'sha256':sha(data) if data is not None else None,'previous':[sha(before) if before is not None else None],'mode':int(new.get(name,'100644'),8)&0o777}
+            previous=[sha(before) if before is not None else None]
+            for ref, inventory in extra:
+                previous.append(sha(git('show',ref+':'+name)) if name in inventory else None)
+            manifest['files'][name]={'sha256':sha(data) if data is not None else None,'previous':list(dict.fromkeys(previous)),'mode':int(new.get(name,'100644'),8)&0o777}
             if data is not None:z.writestr('payload/'+name,data)
         z.writestr('manifest.json',json.dumps(manifest,ensure_ascii=False,indent=2))
     full=a.out/f'pablo-design-{version}.zip'

@@ -15,6 +15,8 @@ class UpdateTest(unittest.TestCase):
     def setUp(self):
         self.tmp=tempfile.TemporaryDirectory();self.addCleanup(self.tmp.cleanup)
         self.base=Path(self.tmp.name);self.root=self.base/'skill';self.root.mkdir()
+        home_patch=patch.object(u.Path, 'home', return_value=self.base/'home')
+        home_patch.start();self.addCleanup(home_patch.stop)
         (self.root/'SKILL.md').write_bytes(b'old')
         (self.root/'.env').write_bytes(b'private')
         (self.root/'outputs').mkdir();(self.root/'outputs/user.txt').write_bytes(b'keep')
@@ -30,7 +32,7 @@ class UpdateTest(unittest.TestCase):
         self.assertEqual((self.root/'SKILL.md').read_bytes(),b'new')
         self.assertEqual((self.root/'.env').read_bytes(),b'private')
         self.assertEqual((self.root/'outputs/user.txt').read_bytes(),b'keep')
-        self.assertEqual(len(list(self.base.glob('pablo-update-backup-*'))),1)
+        self.assertEqual(len(list((self.base/'home/.pablo-design/update-backups').glob('pablo-*'))),1)
     def test_local_edit_rejected(self):
         self.bundle();(self.root/'SKILL.md').write_bytes(b'edited')
         with self.assertRaises(ValueError):u.update(self.archive,self.root,True)
