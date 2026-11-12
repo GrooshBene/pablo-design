@@ -11,7 +11,7 @@ import zipfile
 def git(*args): return subprocess.check_output(['git', *args])
 def sha(data): return hashlib.sha256(data).hexdigest()
 def tree(ref):
-    return {x.split('\t')[1]:x.split()[0] for x in git('ls-tree','-r',ref).decode().splitlines()}
+    return {x.split('\t')[1]:x.split()[0] for x in git('ls-tree','-rz',ref).decode().rstrip('\0').split('\0')}
 
 
 def main():
